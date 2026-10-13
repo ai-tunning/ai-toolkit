@@ -26,6 +26,7 @@ echo ""
 # ── 1. Ensure uv (prebuilt static binary, kept inside the repo) ─────
 export PATH="$SCRIPT_DIR/.uv:$PATH"
 export UV_PYTHON_INSTALL_DIR="$SCRIPT_DIR/.uv/python"
+bash ./scripts/convert_diffusers_to_comfy_beta.sh
 if ! command -v uv >/dev/null 2>&1; then
     echo "Downloading uv (package/python manager) into .uv/ ..."
     curl -LsSf https://astral.sh/uv/install.sh | \
